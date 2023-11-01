@@ -2,7 +2,16 @@
  * @param {number} rowIndex
  * @return {number[]}
  */
-
+// time complexity: O(n^2)
+/**
+ * dominant factor trumps here
+ * n being the number of rows we make
+ * we loop over it for each index the same length
+ */
+// space complexity: O(n^2)
+/**
+ * matrix consumes space proportional to number of rows
+ */
 // this of the triangle as a matrix
 /**
     [
