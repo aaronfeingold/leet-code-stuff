@@ -5,6 +5,8 @@
 
 var isPalindrome = function(s) {
     const string = s.trim().toLowerCase()
+    console.log(`string: ${string}`);
+    // string: 0p
 
     const arr = []
     for (const char of string) {
@@ -15,7 +17,10 @@ var isPalindrome = function(s) {
 
     const fwd = arr.join("")
     const rvs = arr.reverse().join("")
-
+    console.log(`fwd: ${fwd}`)
+    // fwd: p
+    console.log(`rvs: ${rvs}`)
+    // rvs: p
     if (fwd === rvs) {
         return true
     }
@@ -23,6 +28,7 @@ var isPalindrome = function(s) {
     return false
 };
 
+// should be false...but why?
 const test = "0P";
 
-isPalindrome(test)
+console.log(isPalindrome(test))
