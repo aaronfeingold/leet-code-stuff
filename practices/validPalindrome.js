@@ -5,8 +5,6 @@
 
 var isPalindrome = function(s) {
     const string = s.trim().toLowerCase()
-    console.log(`string: ${string}`);
-    // string: 0p
 
     const arr = []
     for (const char of string) {
@@ -16,11 +14,8 @@ var isPalindrome = function(s) {
     }
 
     const fwd = arr.join("")
-    const rvs = arr.reverse().join("")
-    console.log(`fwd: ${fwd}`)
-    // fwd: p
-    console.log(`rvs: ${rvs}`)
-    // rvs: p
+    const rvs = [ ...arr ].reverse().join("")
+
     if (fwd === rvs) {
         return true
     }
