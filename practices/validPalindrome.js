@@ -3,8 +3,8 @@
  * @return {boolean}
  */
 
-// run time = 78ms, beats 12.97%
-// memory = 53.98, beats 5.08 %
+// run time = 52ms, beats 94.59%
+// memory = 46.58, beats 40.67 %
 var isPalindrome = function(s) {
     const str = s.replace(/[^a-z0-9]/gi, "").toLowerCase()
 
