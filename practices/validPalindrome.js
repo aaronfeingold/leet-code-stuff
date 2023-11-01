@@ -22,3 +22,7 @@ var isPalindrome = function(s) {
 
     return false
 };
+
+const test = "0P";
+
+isPalindrome(test)
