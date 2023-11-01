@@ -10,8 +10,3 @@ var isPalindrome = function(s) {
 
     return str.split("").reverse().join("") === str;
 };
-
-// should be false...but why?
-const test = "0P";
-
-console.log(isPalindrome(test))
