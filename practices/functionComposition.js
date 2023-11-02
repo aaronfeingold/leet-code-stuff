@@ -2,6 +2,14 @@
  * @param {Function[]} functions
  * @return {Function}
  */
+/**
+Runtime
+- 55ms
+- Beats 91.09%of users with JavaScript
+Memory
+- 45.22MB
+- Beats 5.26%of users with JavaScript
+ */
 var compose = function(functions) {
     // use recursion
     // consider simple cases
