@@ -25,9 +25,8 @@ var compose = function(functions) {
 
     else {
         // get the first function
-        const firstFunction = functions[0];
         // get the remaining functions
-        const rest = functions.slice(1)
+        const [firstFunction, ...rest] = functions;
         // pass the result of the remaining ones to the first
         return function(x) {
             return firstFunction(compose(rest)(x))
