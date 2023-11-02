@@ -4,11 +4,11 @@
  */
 /**
 Runtime
-- 51ms
-- Beats 55.46%of users with JavaScript
+- 49 ms
+- Beats - 66.34%
 Memory
-- 41.98MB
-- Beats 40.73%of users with JavaScript
+- 41.9 MB
+- Beats - 40.73%
  */
 // Time and Space are both O(n) since it we traverse the arguments given
 var argumentsLength = function(...args) {
