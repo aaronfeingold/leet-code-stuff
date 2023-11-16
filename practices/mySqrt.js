@@ -2,6 +2,16 @@
  * @param {number} x
  * @return {number}
  */
+
+/**
+ *
+Runtime
+- 104ms
+- Beats 6.39%of users with JavaScript
+Memory
+- 43.60MB
+- Beats 64.91%of users with JavaScript
+ */
 var mySqrt = function(x) {
     // define some boundaries
     if (x === 1) {
