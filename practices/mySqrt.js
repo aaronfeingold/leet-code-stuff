@@ -8,15 +8,13 @@ var mySqrt = function(x) {
         return x
     }
 
-    let upperBound = x/2
+    let upperBound = x/2 + 1
 
     let sqrt = 0
 
     while (sqrt <= upperBound) {
         let math = sqrt * sqrt
-        console.log(`math: ${math}`)
         if (math === x) {
-            console.log('barfoo')
             return sqrt
         }
         if (math > x) {
