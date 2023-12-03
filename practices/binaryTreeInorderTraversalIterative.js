@@ -5,18 +5,21 @@ function TreeNode (val, left, right) {
 };
 
 function inorderTraversal (root) {
-    // initialize empty stack
+    // step one: initialize empty stack
     const stack = []
     const data = []
+    // step two: initialize the current as root
     let current = root
-
     while (current || stack.length) {
+        // step three: if current exists, push it into our stack, and traverse left
         while (current) {
             stack.push(current)
             current = current.left
         }
+        // step four: pop from stack, push to data (to be returned)
         const tmp = stack.pop()
         data.push(tmp.val)
+        // and set the current to the pop node's right
         current = tmp.right
     }
 
