@@ -6,7 +6,7 @@ of each word are the same you can read this”)  Returns:  “Bcesaue the fisrt 
 
 const randomizeWords = (phrase) => phrase.split(" ").map(word => `${word[0]}${shuffle(word.slice(1, word.length -1))}${word[word.length -1]}`).join(" ");
 
-function shuffle(word) {
+const shuffle = (word) => {
     const split = word.split("")
     for (let i = split.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
