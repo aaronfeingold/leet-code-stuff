@@ -8,7 +8,7 @@ var restoreString = function(s, indices) {
     for (let i = 0; i < s.length; i++) {
         newS[indices[i]] = s[i]
     }
-    console.log(newS)
+
     return Object.values(newS).join("");
 };
 
