@@ -2,41 +2,40 @@
  * @param {string} s
  * @return {boolean}
  */
+// two pointer technique
 var validPalindrome = function(s) {
     let i = 0;
     let j = s.length - 1;
-    let deletions = 0;
 
-    while (i <= j) {
+    while (i < j) {
         if (s[i] !== s[j]) {
-            if (s[i] === s[j - 1]) {
-                deletions ++
-                if (deletions > 1) {
-                    return false
-                }
-                i++;
-                j = j - 2;
-                continue;
-            } else if (s[i + 1] === s[j]) {
-                deletions ++
-                if (deletions > 1) {
-                    return false
-                }
-                i = i + 2
-                j--
-                continue;
-            } else {
-                return false;
-            }
+            // let's treat the subsection of the string where the comparison fails as its own mini palindrome
+            // if we were to skip one from the left, would it still be valid?
+            // or what about if skipping one from right?
+            // if either is true, then we are valid
+            // but both false, then for sure this palindrome is invalid even if we remove 1 or the other
+            return checkSubPalidromeValidity(s, i, j-1) || checkSubPalidromeValidity(s, i+1, j);
         }
-
 
         i++;
         j--;
     }
 
-    return true
-
+    return true;
 };
 
-console.log(validPalindrome("ebcbbececabbacecbbcbe"));
+var checkSubPalidromeValidity = (string, start, end) => {
+    while (start < end) {
+        if (string[start] !== string[end]) {
+            // note: if we use recursion, we could check the subSubString if we allow 2 removals lol
+            return false;
+        }
+
+        start ++;
+        end --;
+    }
+
+    return true;
+}
+
+console.log(validPalindrome("ebcbbececabbacecbbcbe"))
