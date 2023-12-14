@@ -27,8 +27,7 @@ var validPalindrome = function(s) {
 var checkSubPalidromeValidity = (string, start, end) => {
     while (start < end) {
         if (string[start] !== string[end]) {
-            // note: if we use recursion, we could check the subSubString if we allow 2 removals lol
-            return checkSubPalidromeValidity(string, start, end-1) || checkSubPalidromeValidity(string, start+1, end);
+            return false;
         }
 
         start ++;
@@ -38,4 +37,4 @@ var checkSubPalidromeValidity = (string, start, end) => {
     return true;
 }
 
-console.log(validPalindrome("abc"))
+console.log(validPalindrome("ebcbbececabbacecbbcbe"))
