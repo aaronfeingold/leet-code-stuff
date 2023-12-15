@@ -12,7 +12,13 @@ var validPalindrome = function(s, deletions = false) {
             if (deletions) {
                 return false;
             }
-            return validPalindrome(s.slice(i + 1, j + 1), true) || validPalindrome(s.slice(i, j - 1), true);
+            // scenario 1:
+            // move the pointer at i to the right 1 so we cut off i
+            // but in order to include the letter at j in the new slice, we need to slice up to 1 index after
+            // scenario 2:
+            // leave i where it is so we include the letter there
+            // but to cut off the letter at j, we slice up to the index
+            return validPalindrome(s.slice(i + 1, j + 1), true) || validPalindrome(s.slice(i, j), true);
         }
 
         i++;
