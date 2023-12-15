@@ -12,12 +12,11 @@ var validPalindrome = function(s, deletions = false) {
             if (deletions) {
                 return false;
             }
-            return validPalindrome(s.slice(i+1, j), true) || validPalindrome(s.slice(i, j-1), true);
+            return validPalindrome(s.slice(i + 1, j + 1), true) || validPalindrome(s.slice(i, j - 1), true);
         }
 
         i++;
         j--;
-
     }
 
     return true;
