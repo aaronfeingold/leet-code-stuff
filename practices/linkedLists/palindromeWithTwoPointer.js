@@ -10,6 +10,8 @@ function ListNode(val, next) {
  */
 
 // two pointer to find middle and cut in half
+// time complexity: O(n)
+// space complexity: O(1) - reversal is done in place, and no addition resource required
 var isPalindrome = function(head) {
     // of course, consider base case first, since
     // empty or single node is a palindrome
