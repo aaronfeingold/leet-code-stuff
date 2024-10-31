@@ -8,5 +8,3 @@ class Animal {
     }
 }
 let a = new Animal();
-a.eat();
-a.barf();
